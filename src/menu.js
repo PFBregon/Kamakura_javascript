@@ -13,7 +13,19 @@ function mostrar_filtros_general(datos) {
 }
 
 //DEBE imprimir en pantalla los productos, con su Título, descripción y precio en € y botón de añadir.
-function mostrar_menu_general() {
+function mostrar_productos(productos) {
+        
+    let mostrar_productos = document.getElementById('products');
+    let filtro_productos= "" ;
+    productos.map(platos => {
+        filtro_productos += `<div class="products-container">${platos} </div>`
+    });
     
-};
-export {mostrar_filtros_general};
+    filtros_contenedor.innerHTML = filtro_productos;
+}; 
+
+
+
+export {mostrar_filtros_general, mostrar_productos};
+
+
