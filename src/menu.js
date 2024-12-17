@@ -18,10 +18,18 @@ function mostrar_productos(productos) {
     let mostrar_productos = document.getElementById('products');
     let filtro_productos= "" ;
     productos.map(platos => {
-        filtro_productos += `<div class="products-container">${platos} </div>`
+        filtro_productos += `<div class="product-container">
+                    <h3>${platos.name}</h3>
+                    <p>${platos.description}</p>
+                    <div class="price-container">
+                        <h5>${platos.price} €</h5>
+                        <button class="add-button">Añadir</button>
+                    </div>
+
+                </div>`
     });
     
-    filtros_contenedor.innerHTML = filtro_productos;
+    mostrar_productos.innerHTML = filtro_productos;
 }; 
 
 
