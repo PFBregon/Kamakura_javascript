@@ -2,11 +2,11 @@ import { products } from '../assets/data/data.js';
 import { mostrar_menu_general } from './menu.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const filtrosContenedor = document.getElementById('filters');
+    const filtroDelMenu = document.getElementById('filters');
     const productosContenedor = document.getElementById('products');
 
     // Agregar evento de click a cada botón de filtro
-    filtrosContenedor.addEventListener('click', (e) => {
+    filtroDelMenu.addEventListener('click', (e) => {
         if (e.target.classList.contains('filter')) {
             const categoriaSeleccionada = e.target.textContent.toLowerCase();
 

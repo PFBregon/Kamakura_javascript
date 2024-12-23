@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mostrar el menú completo al inicio
     mostrar_menu_general(products);
 });
-
+carritoBtn.addEventListener("click", () => {
+    carritoAside.classList.toggle("visible");
+  });
 
 /*import {filters, products} from "../assets/data/data.js";
 import {manejarFiltro, mostrar_menu_general} from "./searcher.js";
